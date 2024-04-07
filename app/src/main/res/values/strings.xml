@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Blood-pressure-bpm-tracker</string>
+    <string name="main_name">Blood Pressure BPM Tracker</string>
+    <string name="history_name">History</string>
+    <string name="add_record_name">New Record</string>
+    <string name="save">Save</string>
+    <string name="DateAndTime">Date &amp; Time</string>
+    <string name="AllHistory">All History</string>
+    <string name="History">History</string>
+    <string name="time_format">%1\$s:%2\$s</string>
+    <string name="systolic">Systolic</string>
+    <string name="mmhg">(mmHg)</string>
+    <string name="bmp">(BMP)</string>
+    <string name="fab_content_desc">Button for adding records</string>
+</resources>

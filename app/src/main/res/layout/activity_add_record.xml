@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".AddRecord">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/arrow_back"
+            app:navigationIconTint="@color/white"
+            app:title="@string/add_record_name"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutForRecords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:padding="@dimen/padding10Dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/layoutSystolicPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding10Dp"
+            android:layout_margin="@dimen/marginForInnerLayout"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/systolic"
+                android:textSize="@dimen/defaultTextSize"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mmhg"
+                android:textAlignment="center"
+                android:textColor="@color/light_grey" />
+
+            <NumberPicker
+                android:id="@+id/systolicPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutDiastolicPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding10Dp"
+            android:layout_margin="@dimen/marginForInnerLayout"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/systolic"
+                android:textSize="@dimen/defaultTextSize"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mmhg"
+                android:textAlignment="center"
+                android:textColor="@color/light_grey" />
+
+            <NumberPicker
+                android:id="@+id/diastolicPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutPulsePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding10Dp"
+            android:background="@drawable/rounded_background"
+            android:layout_margin="@dimen/marginForInnerLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/systolic"
+                android:textSize="@dimen/defaultTextSize"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/bmp"
+                android:textAlignment="center"
+                android:textColor="@color/light_grey" />
+
+            <NumberPicker
+                android:id="@+id/pulsePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding10Dp"
+        android:text="@string/DateAndTime"
+        android:textSize="@dimen/defaultTextSize"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/layoutForRecords"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/layoutForPickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/dateAndTime">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/date_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/defaultMargin"
+            android:textSize="@dimen/defaultTextSize"
+            android:textColor="@color/black"
+            app:icon="@drawable/calendar_today"
+            app:iconTint="@color/black"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/time_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/defaultMargin"
+            android:textSize="@dimen/defaultTextSize"
+            android:textColor="@color/black"
+            app:icon="@drawable/schedule"
+            app:iconTint="@color/black"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutForPickers"
+        android:layout_margin="@dimen/defaultMargin"
+        android:backgroundTint="@color/green"
+        android:text="@string/save"
+        android:textSize="@dimen/defaultTextSize"
+        android:paddingBottom="@dimen/padding10Dp"
+        android:paddingTop="@dimen/padding10Dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
