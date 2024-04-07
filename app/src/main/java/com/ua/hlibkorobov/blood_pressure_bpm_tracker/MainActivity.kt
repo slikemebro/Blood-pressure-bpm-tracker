@@ -26,12 +26,6 @@ class MainActivity : AppCompatActivity() {
         val buttonHistory: ExtendedFloatingActionButton = findViewById(R.id.efab)
         val itemList: RecyclerView = findViewById(R.id.itemList)
 
-
-//        items.add(PressureRecord(100,90,80, Date()))
-//        items.add(PressureRecord(102,90,80, Date()))
-//        items.add(PressureRecord(103,90,80, Date()))
-//        items.add(PressureRecord(104,90,80, Date()))
-
         itemList.layoutManager = LinearLayoutManager(this)
         itemList.adapter = ItemsAdapter(items, this, 3)
 
@@ -45,7 +39,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-//    fun addElements(pressureRecord: PressureRecord){
-//        items.add(pressureRecord)
-//    }
 }

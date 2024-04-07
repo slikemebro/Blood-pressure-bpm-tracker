@@ -9,8 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class ItemsAdapter(private var items: MutableList<PressureRecord>, var context: Context, private var size: Int) :
-    RecyclerView.Adapter<ItemsAdapter.MyViewHolder>() {
+class ItemsAdapter(
+    private var items: MutableList<PressureRecord>,
+    var context: Context,
+    private var size: Int
+) : RecyclerView.Adapter<ItemsAdapter.MyViewHolder>() {
 
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -28,7 +31,6 @@ class ItemsAdapter(private var items: MutableList<PressureRecord>, var context: 
     }
 
     override fun getItemCount(): Int {
-//        return items.count()
         return minOf(size, items.size)
     }
 
@@ -37,7 +39,10 @@ class ItemsAdapter(private var items: MutableList<PressureRecord>, var context: 
         holder.diastolic.text = items[items.size - 1 - position].diastolic.toString()
         holder.pulse.text = "Pulse: ${items[items.size - 1 - position].pulse} BMP"
 
-        val formattedDate = SimpleDateFormat("HH:mm, dd/MM/yyyy", Locale.getDefault()).format(items[items.size - 1 - position].date!!)
+        val formattedDate = SimpleDateFormat(
+            "HH:mm, dd/MM/yyyy",
+            Locale.getDefault()
+        ).format(items[items.size - 1 - position].date!!)
         holder.date.text = formattedDate
     }
 }

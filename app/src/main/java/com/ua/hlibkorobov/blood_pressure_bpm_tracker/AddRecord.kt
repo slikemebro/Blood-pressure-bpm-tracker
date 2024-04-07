@@ -25,7 +25,6 @@ class AddRecord : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_add_record)
 
-
         val previous: MaterialToolbar = findViewById(R.id.topAppBar)
         val systolicPicker: NumberPicker = findViewById(R.id.systolicPicker)
         val diastolicPicker: NumberPicker = findViewById(R.id.diastolicPicker)
@@ -52,22 +51,30 @@ class AddRecord : AppCompatActivity() {
         }
 
         saveButton.setOnClickListener {
-            val dateTimeString = "${datePickerButton.text} ${timePickerButton.text}"
-            val dateTimeFormat = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
-            val dateTime = dateTimeFormat.parse(dateTimeString)
+            val dateTime = getDate()
 
-            val pressureRecord = PressureRecord(systolicPicker.value, diastolicPicker.value, pulsePicker.value, dateTime)
+            val pressureRecord = PressureRecord(
+                systolicPicker.value,
+                diastolicPicker.value,
+                pulsePicker.value,
+                dateTime
+            )
             MainActivity.addElements(pressureRecord)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-
-        setNumberPicker(systolicPicker, 100,200)
+        setNumberPicker(systolicPicker, 100, 200)
         setNumberPicker(diastolicPicker, 78, 200)
         setNumberPicker(pulsePicker, 80, 300)
         setCurrentDate()
         setCurrentTime()
+    }
+
+    private fun getDate(): Date? {
+        val dateTimeString = "${datePickerButton.text} ${timePickerButton.text}"
+        val dateTimeFormat = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+        return dateTimeFormat.parse(dateTimeString)
     }
 
     private fun setNumberPicker(systolicPicker: NumberPicker, defaultValue: Int, maxValue: Int) {
