@@ -17,10 +17,10 @@ class ItemsAdapter(
 
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val systolic: TextView = view.findViewById(R.id.item_list_systolic)
-        val diastolic: TextView = view.findViewById(R.id.item_list_diastolic)
-        val pulse: TextView = view.findViewById(R.id.item_list_pulse)
-        val date: TextView = view.findViewById(R.id.item_list_date)
+        val systolic: TextView = view.findViewById(R.id.itemListSystolic)
+        val diastolic: TextView = view.findViewById(R.id.itemListDiastolic)
+        val pulse: TextView = view.findViewById(R.id.itemListPulse)
+        val date: TextView = view.findViewById(R.id.itemListDate)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

@@ -31,19 +31,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:padding="@dimen/defaultPadding"
+        android:padding="@dimen/default_padding"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <LinearLayout
             android:id="@+id/layoutSystolicPicker"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/marginForInnerLayout"
+            android:layout_margin="@dimen/margin_forInner_layout"
             android:layout_weight="1"
             android:background="@drawable/rounded_background"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="@dimen/defaultPadding">
+            android:padding="@dimen/default_padding">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
                 android:layout_gravity="center"
                 android:text="@string/systolic"
                 android:textAlignment="center"
-                android:textSize="@dimen/defaultTextSize"
+                android:textSize="@dimen/default_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -73,12 +73,12 @@
             android:id="@+id/layoutDiastolicPicker"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/marginForInnerLayout"
+            android:layout_margin="@dimen/margin_forInner_layout"
             android:layout_weight="1"
             android:background="@drawable/rounded_background"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="@dimen/defaultPadding">
+            android:padding="@dimen/default_padding">
 
             <TextView
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 android:layout_gravity="center"
                 android:text="@string/diastolic"
                 android:textAlignment="center"
-                android:textSize="@dimen/defaultTextSize"
+                android:textSize="@dimen/default_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -108,12 +108,12 @@
             android:id="@+id/layoutPulsePicker"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/marginForInnerLayout"
+            android:layout_margin="@dimen/margin_forInner_layout"
             android:layout_weight="1"
             android:background="@drawable/rounded_background"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="@dimen/defaultPadding">
+            android:padding="@dimen/default_padding">
 
             <TextView
                 android:layout_width="match_parent"
@@ -121,7 +121,7 @@
                 android:layout_gravity="center"
                 android:text="@string/pulse"
                 android:textAlignment="center"
-                android:textSize="@dimen/defaultTextSize"
+                android:textSize="@dimen/default_text_size"
                 android:textStyle="bold" />
 
             <TextView
@@ -144,10 +144,10 @@
         android:id="@+id/dateAndTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin"
-        android:text="@string/DateAndTime"
+        android:layout_margin="@dimen/default_margin"
+        android:text="@string/date_and_time"
         android:textColor="@color/black"
-        android:textSize="@dimen/defaultTextSize"
+        android:textSize="@dimen/default_text_size"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/layoutForRecords"
         tools:ignore="RtlSymmetry" />
@@ -160,28 +160,28 @@
         app:layout_constraintTop_toBottomOf="@+id/dateAndTime">
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/date_picker"
+            android:id="@+id/datePickerButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/defaultMargin"
+            android:layout_margin="@dimen/default_margin"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:textSize="@dimen/defaultTextSize"
+            android:textSize="@dimen/default_text_size"
             app:backgroundTint="@color/white"
             app:icon="@drawable/calendar_today"
             app:iconGravity="textStart"
             app:iconTint="@color/black" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/time_picker"
+            android:id="@+id/timePickerButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/defaultMargin"
+            android:layout_margin="@dimen/default_margin"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:textSize="@dimen/defaultTextSize"
+            android:textSize="@dimen/default_text_size"
             app:backgroundTint="@color/white"
             app:icon="@drawable/schedule"
             app:iconGravity="textStart"
@@ -192,11 +192,11 @@
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin"
+        android:layout_margin="@dimen/default_margin"
         android:backgroundTint="@color/green"
-        android:paddingTop="@dimen/defaultPadding"
-        android:paddingBottom="@dimen/defaultPadding"
+        android:paddingTop="@dimen/default_padding"
+        android:paddingBottom="@dimen/default_padding"
         android:text="@string/save"
-        android:textSize="@dimen/defaultTextSize"
+        android:textSize="@dimen/default_text_size"
         app:layout_constraintTop_toBottomOf="@id/layoutForPickers" />
 </androidx.constraintlayout.widget.ConstraintLayout>

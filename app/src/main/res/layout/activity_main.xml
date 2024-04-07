@@ -28,22 +28,23 @@
         android:id="@+id/itemList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin"
+        android:layout_margin="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/efab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin"
+        android:layout_margin="@dimen/default_margin"
         android:backgroundTint="@color/white"
-        android:text="@string/AllHistory"
+        android:text="@string/all_history"
         android:textColor="@color/black"
-        android:textSize="@dimen/defaultTextSize"
+        android:textSize="@dimen/default_text_size"
         app:icon="@drawable/history"
         app:iconGravity="textStart"
-        app:iconSize="@dimen/defaultIconSize"
+        app:iconSize="@dimen/default_icon_size"
         app:iconTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/itemList" />
@@ -52,7 +53,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin"
+        android:layout_margin="@dimen/default_margin"
         android:backgroundTint="@color/green"
         android:contentDescription="@string/fab_content_desc"
         android:src="@drawable/add"

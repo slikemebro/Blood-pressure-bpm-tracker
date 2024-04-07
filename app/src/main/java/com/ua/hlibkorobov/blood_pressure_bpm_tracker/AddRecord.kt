@@ -30,8 +30,8 @@ class AddRecord : AppCompatActivity() {
         val diastolicPicker: NumberPicker = findViewById(R.id.diastolicPicker)
         val pulsePicker: NumberPicker = findViewById(R.id.pulsePicker)
         val saveButton: Button = findViewById(R.id.saveButton)
-        datePickerButton = findViewById(R.id.date_picker)
-        timePickerButton = findViewById(R.id.time_picker)
+        datePickerButton = findViewById(R.id.datePickerButton)
+        timePickerButton = findViewById(R.id.timePickerButton)
 
         previous.setNavigationOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
