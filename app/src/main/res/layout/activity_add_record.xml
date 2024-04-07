@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/systolic"
+                android:text="@string/diastolic"
                 android:textAlignment="center"
                 android:textSize="@dimen/defaultTextSize"
                 android:textStyle="bold" />
@@ -119,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/systolic"
+                android:text="@string/pulse"
                 android:textAlignment="center"
                 android:textSize="@dimen/defaultTextSize"
                 android:textStyle="bold" />
@@ -144,8 +144,9 @@
         android:id="@+id/dateAndTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/defaultPadding"
+        android:layout_margin="@dimen/defaultMargin"
         android:text="@string/DateAndTime"
+        android:textColor="@color/black"
         android:textSize="@dimen/defaultTextSize"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/layoutForRecords"

@@ -9,6 +9,8 @@
     <string name="History">History</string>
     <string name="time_format">%1\$s:%2\$s</string>
     <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="pulse">Pulse</string>
     <string name="mmhg">(mmHg)</string>
     <string name="bmp">(BMP)</string>
     <string name="fab_content_desc">Button for adding records</string>

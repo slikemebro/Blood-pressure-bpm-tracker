@@ -77,11 +77,11 @@ class AddRecord : AppCompatActivity() {
         return dateTimeFormat.parse(dateTimeString)
     }
 
-    private fun setNumberPicker(systolicPicker: NumberPicker, defaultValue: Int, maxValue: Int) {
-        systolicPicker.minValue = 0
-        systolicPicker.maxValue = maxValue
-        systolicPicker.wrapSelectorWheel = false
-        systolicPicker.value = defaultValue
+    private fun setNumberPicker(numberPicker: NumberPicker, defaultValue: Int, maxValue: Int) {
+        numberPicker.minValue = 0
+        numberPicker.maxValue = maxValue
+        numberPicker.wrapSelectorWheel = false
+        numberPicker.value = defaultValue
     }
 
     private fun setCurrentTime() {
