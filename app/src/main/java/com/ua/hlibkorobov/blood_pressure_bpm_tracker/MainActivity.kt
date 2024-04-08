@@ -2,6 +2,7 @@ package com.ua.hlibkorobov.blood_pressure_bpm_tracker
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,5 +38,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, History::class.java)
             startActivity(intent)
         }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                finishAffinity()
+            }
+        })
     }
 }
