@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         val items = mutableListOf<PressureRecord>()
-        fun addElements(pressureRecord: PressureRecord) = items.add(pressureRecord)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

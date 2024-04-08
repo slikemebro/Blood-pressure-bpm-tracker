@@ -55,7 +55,7 @@ class AddRecord : AppCompatActivity() {
                 pulsePicker.value,
                 dateTime
             )
-            MainActivity.addElements(pressureRecord)
+            MainActivity.items.add(pressureRecord)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
