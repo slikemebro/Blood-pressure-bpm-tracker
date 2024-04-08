@@ -38,10 +38,6 @@ class AddRecord : AppCompatActivity() {
             startActivity(intent)
         }
 
-        systolicPicker.setOnValueChangedListener { picker, _, newVal ->
-            picker.value = newVal
-        }
-
         timePickerButton.setOnClickListener {
             showTimePickerDialog()
         }
