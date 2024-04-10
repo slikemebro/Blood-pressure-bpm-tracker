@@ -1,9 +1,6 @@
 package com.ua.hlibkorobov.blood_pressure_bpm_tracker
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.window.OnBackInvokedCallback
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +24,7 @@ class History : AppCompatActivity() {
             finish()
         }
 
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 finish()
             }
